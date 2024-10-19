@@ -107,7 +107,7 @@ def draw_ocean():
     frequency = 0.02
     x = -600
     while x < 600:
-        y = amplitude * math.sin(frequency * x) + 50
+        y = amplitude * math.sin(frequency * x) + 50 # We are using a sin function to create the wave pattern of the ocean. Amplitude says how tall the ocean will be. Frequency says how many waves there are. 50 is to shift the waves of the ocean by 50 units. X=-600. Moves right 10 all the way till it reaches 601. And it will create a new y coordinate within the sin graph to make the waves correct as explained earlier. 
         t.goto(x, y)
         x += 10
         if x == -590:  
