@@ -42,7 +42,7 @@ def draw_building(x, height):
             window_y = -180 + (row * 40)
             t.goto(window_x, window_y)
            
-            window_color = 'yellow' if random.random() > 0.4 else 'black'
+            window_color = 'yellow' if random.random() > 0.4 else 'black'    # majority of the times the window color will be yellow but there is a 40% chance it will be black which is put there to randomize the window colors. 
             t.fillcolor(window_color)
            
             t.begin_fill()
