@@ -12,13 +12,13 @@ class Scenery:
         self.done_drawing()
 
     def draw_gradient_sky(self):
-        colors = ["#FF8C00", "#FF6B00", "#FF4500", "#FF1493", "#4B0082"]
+        colors = ["#FF8C00", "#FF6B00", "#FF4500", "#FF1493", "#4B0082"] # color list 
         height = 800
         section_height = height / len(colors)
 
         for i, color in enumerate(colors):
             self.turtle.penup()
-            self.turtle.goto(-600, 400 - (i * section_height))
+            self.turtle.goto(-600, 400 - (i * section_height))    #Make a series of coordinate such that the function can execute at these points 
             self.turtle.setheading(0)
             self.turtle.fillcolor(color)
             self.turtle.begin_fill()
@@ -33,7 +33,7 @@ class Scenery:
         """Draw the setting sun"""
         self.turtle.penup()
         self.turtle.goto(0, 50)
-        self.turtle.fillcolor("#FFD700")
+        self.turtle.fillcolor("#FFD700") #using set colors to fill in the sun
         self.turtle.begin_fill()
         self.turtle.circle(60)
         self.turtle.end_fill()
@@ -54,7 +54,7 @@ class Scenery:
         """Draw ocean with waves"""
         self.turtle.penup()
         self.turtle.goto(-600, 50)
-        self.turtle.fillcolor("#4169E1")
+        self.turtle.fillcolor("#4169E1") # Making waves color set to this 
         self.turtle.begin_fill()
         self.turtle.setheading(0)
 
@@ -62,7 +62,7 @@ class Scenery:
         frequency = 0.02
         x = -600
         while x < 600:
-            y = amplitude * math.sin(frequency * x) + 50
+            y = amplitude * math.sin(frequency * x) + 50 # Making the shape of the waves as they corrospond to the shape of a sin graph
             self.turtle.goto(x, y)
             x += 10
             if x == -590:
